@@ -41,7 +41,7 @@ export default function Itens(props: Props) {
     const novaLista = cardapio.filter(item => testaBusca(item.title) && testaFiltro(item.category.id));
     setLista(ordenar(novaLista));
   },[busca, filtro, ordenador]);
-
+  
   return (
     <div className={styles.itens}>
       {lista.map(item => (

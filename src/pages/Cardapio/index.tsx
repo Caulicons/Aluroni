@@ -5,8 +5,9 @@ import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 import stylesTema from 'styles/Tema.module.scss';
+import {memo} from 'react';
 
-export default function Cardapio() {
+function Cardapio() {
 
   const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<number | null>(null);
@@ -24,3 +25,5 @@ export default function Cardapio() {
     </section>
   );
 }
+
+export default memo(Cardapio);
